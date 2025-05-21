@@ -1,0 +1,49 @@
+@use "variables" as vars;
+
+#formSoporte {
+    display: none;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 2rem auto;
+    font-family: inherit;
+  
+    h3 {
+      margin-bottom: 1rem;
+      color: vars.$primary-color;
+      text-align: center;
+    }
+  
+    label {
+      display: block;
+      margin: 0.5rem 0 0.25rem;
+      color: #444;
+    }
+  
+    input, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+  
+    button {
+      display: block;
+      margin: 0 auto;
+      background-color: vars.$primary-color;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: darken(vars.$primary-color, 10%);
+      }
+    }
+  }
+  

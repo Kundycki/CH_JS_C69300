@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turnos Consultorio</title>
+</head>
+<body>
+    <h1>Sim. Turnos</h1>
+    <p>¡Solicite su turno aqui!</p>
+    
+    <section id="areas">
+        <h2>Nuestras Áreas</h2>
+        <div class="card">
+          <img src="img/odonto1.png" alt="odontología">
+          <h3>odontología</h3>
+          <p>Turnos generales y chequeos médicos.</p>
+          <button onclick="solicitarTurno('odontología')">Solicitar turno</button>
+        </div>
+      
+        <div class="card">
+          <img src="img/pediatria1.png" alt="Pediatría">
+          <h3>Pediatría</h3>
+          <p>Atención a niños y control del desarrollo.</p>
+          <button onclick="solicitarTurno('Pediatría')">Solicitar turno</button>
+        </div>
+      
+        <div class="card">
+          <img src="img/gineco1.png" alt="Ginecología">
+          <h3>Ginecología</h3>
+          <p>Salud femenina y estudios ginecológicos.</p>
+          <button onclick="solicitarTurno('Ginecología')">Solicitar turno</button>
+        </div>
+      
+        <div class="card">
+          <img src="img/soporte.png" alt="Soporte">
+          <h3>Soporte</h3>
+          <p>Consultas generales, reclamos o necesidades especiales.</p>
+          <button onclick="abrirFormularioSoporte()">Contactar soporte</button>
+        </div>
+    </section>
+    
+    <div id="formSoporte" style="display:none;">
+        <h3>Soporte</h3>
+        <form onsubmit="enviarSoporte(event)">
+          <label for="correo">Correo:</label>
+          <input type="email" id="correo" required>
+      
+          <label for="mensaje">Motivo:</label>
+          <textarea id="mensaje" required></textarea>
+      
+          <button type="submit">Enviar</button>
+        </form>
+    </div>
+      
+    <button onclick="iniciarSimulacionTurno()">Iniciar simulación</button>
+    <button onclick="mostrarTurnosGuardados()">Ver turnos guardados</button>
+
+    <footer class="footer">
+        <p>&copy; 2025 Policonsultorio Salta - Todos los derechos reservados</p>
+        <p>Contacto directo:</p>
+        <ul>
+            <li>Teléfono: 123456789</li>
+            <li>Dr. xxxxxxx xxxxxx: 0387 444 4445 | <a href="mailto:correoejemplo1@mail.com">Correo</a></li>
+            <li>Dr. xxxxxxx xxxxxx: 0387 444 4446 | <a href="mailto:correoejemplo2@mail.com">Correo</a></li>
+        </ul>
+        <div class="footer-links">
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Atención al Cliente</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+
+
+</body>
+</html>
