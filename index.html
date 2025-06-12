@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turnos Consultorio</title>
 </head>
@@ -16,28 +17,28 @@
           <img src="img/odonto1.png" alt="odontología">
           <h3>odontología</h3>
           <p>Turnos generales y chequeos médicos.</p>
-          <button onclick="solicitarTurno('odontología')">Solicitar turno</button>
+          <button data-area="odontología">Solicitar turno</button>
         </div>
       
         <div class="card">
           <img src="img/pediatria1.png" alt="Pediatría">
           <h3>Pediatría</h3>
           <p>Atención a niños y control del desarrollo.</p>
-          <button onclick="solicitarTurno('Pediatría')">Solicitar turno</button>
+          <button data-area="Pediatría">Solicitar turno</button>
         </div>
       
         <div class="card">
           <img src="img/gineco1.png" alt="Ginecología">
           <h3>Ginecología</h3>
           <p>Salud femenina y estudios ginecológicos.</p>
-          <button onclick="solicitarTurno('Ginecología')">Solicitar turno</button>
+          <button data-area="Ginecología">Solicitar turno</button>
         </div>
       
         <div class="card">
           <img src="img/soporte.png" alt="Soporte">
           <h3>Soporte</h3>
           <p>Consultas generales, reclamos o necesidades especiales.</p>
-          <button onclick="abrirFormularioSoporte()">Contactar soporte</button>
+          <button id="btnSoporte">Contactar soporte</button>
         </div>
     </section>
     
@@ -54,8 +55,8 @@
         </form>
     </div>
       
-    <button onclick="iniciarSimulacionTurno()">Iniciar simulación</button>
-    <button onclick="mostrarTurnosGuardados()">Ver turnos guardados</button>
+    <button id="btnSimulacion">Iniciar simulación</button>
+    <button id="btnVerTurnos">Ver turnos guardados</button>
 
     <footer class="footer">
         <p>&copy; 2025 Policonsultorio Salta - Todos los derechos reservados</p>
@@ -73,7 +74,6 @@
     </footer>
 
     <script src="js/main.js" defer></script>
-
 
 </body>
 </html>
